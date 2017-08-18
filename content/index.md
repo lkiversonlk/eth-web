@@ -1,14 +1,14 @@
 ---
-siteTitle: "Next Blog"
-description: "A blog built using next and processmd"
+siteTitle: "94ETH"
+description: "Everything About Eth"
 stylesheets:
   - "https://unpkg.com/tachyons@4.7.4/css/tachyons.min.css"
 topLinks:
   - text: "Blog"
     href: "/"
-  - text: "Github"
-    href: "https://github.com/tscanlin/"
+  - text: "Dapps"
+    href: "/"
 backgroundClass: "bg-dark-gray"
-copyright: "Tim Scanlin"
+copyright: "Jerry City.of.beijing@gmail.com"
 siteId: ""
 ---
