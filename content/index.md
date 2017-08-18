@@ -8,6 +8,8 @@ topLinks:
     href: "/"
   - text: "Dapps"
     href: "/"
+  - text: "Contact"
+    href: "/"
 backgroundClass: "bg-dark-gray"
 copyright: "Jerry City.of.beijing@gmail.com"
 siteId: ""
