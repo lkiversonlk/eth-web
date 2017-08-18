@@ -1,4 +1,4 @@
-const { createServer } = require('https')
+const { createServer } = require('http')
 const { parse } = require('url')
 const { join } = require('path')
 var fs = require('fs')
@@ -13,17 +13,18 @@ const rootStaticFiles = [
   '/assets',
 ]
 
+/*
 var ssl = {
   key: fs.readFileSync('./ssl/liukan.key', 'utf8'),
   cert: fs.readFileSync('./ssl/www.94eth.com.crt', 'utf8'),
   ca: [fs.readFileSync('./ssl/intermediate.crt', 'utf8'),
     fs.readFileSync('./ssl/root.crt', 'utf8')],
   passphrase: 'asdffa'
-}
+}*/
 
 app.prepare()
 .then(() => {
-  createServer(ssl, (req, res) => {
+  createServer((req, res) => {
     const parsedUrl = parse(req.url, true)
     const { pathname, query } = parsedUrl
     if (rootStaticFiles.filter((file) => pathname.indexOf(file) > -1).length > 0) {
