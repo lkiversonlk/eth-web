@@ -51,7 +51,7 @@ function Index(props) {
 
 function Body(props) {
   return (
-    <div className="content center mw6 pa3 pa4-ns">
+    <div className="content center mw8 pa3 pa4-ns">
       <h1 className="mt0 lh-title">{props.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: props.bodyHtml }}></div>
     </div>
