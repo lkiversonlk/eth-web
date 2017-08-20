@@ -13,15 +13,6 @@ const rootStaticFiles = [
   '/assets',
 ]
 
-/*
-var ssl = {
-  key: fs.readFileSync('./ssl/liukan.key', 'utf8'),
-  cert: fs.readFileSync('./ssl/www.94eth.com.crt', 'utf8'),
-  ca: [fs.readFileSync('./ssl/intermediate.crt', 'utf8'),
-    fs.readFileSync('./ssl/root.crt', 'utf8')],
-  passphrase: 'asdffa'
-}*/
-
 app.prepare()
 .then(() => {
   createServer((req, res) => {
