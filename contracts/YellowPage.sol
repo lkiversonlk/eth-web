@@ -1,14 +1,17 @@
 pragma solidity ^0.4.1;
 
 contract YellowPage {
-
     struct Page {
-        address contract_address;
+        address c_addr;
+        address owner;
         bytes32 url;
+        bytes32 abi_url;
         bool    set;
+
     }
 
     mapping(bytes32 => Page) public pages;
+    bytes32[] public names;
     address public owner;
 
     function YellowPage(){
@@ -20,12 +23,24 @@ contract YellowPage {
         owner = newOwner;
     }
 
-    function SetPage(bytes32 name, address contract_addr, bytes32 contract_url) {
+    function SetPage(bytes32 name,
+                     address c_addr,
+                     bytes32 url,
+                     bytes32 abi_url) {
         if(pages[name].set){
-            require(msg.sender == owner);
+            require(msg.sender == owner || msg.sender == pages[name].owner);
+        } else {
+            names.push(name);
         }
-        pages[name].url = contract_url;
         pages[name].set = true;
-        pages[name].contract_address = contract_addr;
+        pages[name].c_addr = c_addr;
+        pages[name].owner = msg.sender;
+        pages[name].url = url;
+        pages[name].abi_url = abi_url;
+    }
+
+    function End() {
+        require(msg.sender == owner);
+        suicide(owner);
     }
 }
