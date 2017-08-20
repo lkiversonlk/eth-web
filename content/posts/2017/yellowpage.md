@@ -59,4 +59,3 @@ that's all!
 #### please contact me city.of.beijing@gmail.com 邮件地址
 
 ---------------------------------
-这篇文章确实
