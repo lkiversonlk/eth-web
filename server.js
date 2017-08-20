@@ -14,7 +14,7 @@ const rootStaticFiles = [
   '/assets',
 ]
 
-var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+//var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8546"));
 app.prepare()
 .then(() => {
   createServer((req, res) => {
@@ -32,11 +32,8 @@ app.prepare()
   })
   .listen(3000, (err) => {
     if (err) throw err
-    var eth = web3.eth
-    var yellowPage = new YellowPage(web3.eth);
-
-
-    console.log(yellowPage.address);
-    console.log('> Ready on http://localhost')
+    //var yellowPage = new YellowPage(web3);
+    //console.log("connect to yellow page" + yellowPage.Owner());
+    console.log('> Ready on http://localhost:3000')
   })
 })
