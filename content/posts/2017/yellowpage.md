@@ -3,9 +3,6 @@ title: Eth-YellowPage parser   智能合约黄页解析
 date: 2017-08-21
 ---
 
-Eth-YellowPage parser   智能合约黄页解析
-=========================
-
 Eth-YellowPage is a contract YellowPage in Ethereum.
 智能合约黄页用来登记大家的智能合约名称和对应的合约地址以及合约Abi文件，方便别人查找和使用。
 
