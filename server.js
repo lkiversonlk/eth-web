@@ -1,7 +1,7 @@
 const { createServer } = require('http')
 const { parse } = require('url')
 const { join } = require('path')
-const { fs } = require('fs')
+const fs = require('fs')
 const YellowPage = require("eth-yellowpage").EthYellowPage;
 const next = require('next')
 const Web3 = require("web3")
@@ -35,5 +35,6 @@ app.prepare()
     //var yellowPage = new YellowPage(web3);
     //console.log("connect to yellow page" + yellowPage.Owner());
     console.log('> Ready on http://localhost:3000')
+    fs.writeFile("PID", process.pid.toString() + '\n');
   })
 })

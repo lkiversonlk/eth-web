@@ -7,3 +7,4 @@ public
 content/**/*.json
 nohup.out
 build
+PID
