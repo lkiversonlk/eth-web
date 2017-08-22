@@ -1,5 +1,5 @@
 ---
-title: 深入浅出Ethereum 3 我们来写一个只能合约
+title: 深入浅出Ethereum 3 我们来写一个智能合约
 date: 2017-08-20
 ---
 更多信息可以前往 [www.94eth.com](http://www.94eth.com)
